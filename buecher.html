@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bücher – mathandphysics.de</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>📘 Bücher</h1>
+    <p>Hier folgen Informationen zu meinen Büchern über Mathematik und Physik.</p>
+
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("nav-placeholder").innerHTML = data;
+        });
+    </script>
+  </main>
+</body>
+</html>

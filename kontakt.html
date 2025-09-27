@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontakt – mathandphysics.de</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>✉️ Kontakt</h1>
+    <p>Hier können Besucher später Informationen finden, wie sie mit mir Kontakt aufnehmen können.</p>
+
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("nav-placeholder").innerHTML = data;
+        });
+    </script>
+  </main>
+</body>
+</html>
