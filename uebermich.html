@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Kontakt – Math & Physics</title>
+  <title>Über mich – Math & Physics</title>
   <style>
     body {
       margin: 0;
@@ -39,12 +39,17 @@
       max-width: 800px;
       margin: 60px auto;
       padding: 20px;
-      text-align: center;
+      text-align: left;
     }
 
     h1 {
       color: #FFD700;
       margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: #FFD700;
     }
 
     p {
@@ -52,35 +57,9 @@
       color: #ddd;
     }
 
-    form {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    input, textarea {
-      width: 100%;
-      max-width: 500px;
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 2px solid #FFD700;
-      border-radius: 6px;
-      background: #111;
-      color: white;
-      font-size: 1em;
-    }
-
-    input[type="submit"] {
-      width: auto;
-      background: #333;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    input[type="submit"]:hover {
-      background: #FFD700;
-      color: #000;
+    ul {
+      color: #ddd;
+      font-size: 1.05em;
     }
 
     footer {
@@ -112,15 +91,27 @@
   </header>
 
   <main>
-    <h1>Kontakt</h1>
-    <p>Schreiben Sie mir gerne eine Nachricht über das Formular:</p>
+    <h1>Über mich</h1>
+    <section>
+      <h2>Christian Weilharter, Dipl.-Ing. (FH)</h2>
+      <p>
+        Ich beschäftige mich seit vielen Jahren intensiv mit Mathematik und Physik 
+        und habe die Erkenntnisse in Buchprojekten aufbereitet, die komplexe Themen 
+        <em>verständlich und kompakt</em> erklären sollen.
+      </p>
+      
+      <h3>Veröffentlichungen</h3>
+      <ul>
+        <li><strong>Photon – Theorie und Anwendungen</strong><br>
+            Erschienen in Deutsch und Englisch</li>
+      </ul>
 
-    <form action="send_mail.php" method="post">
-      <input type="text" name="name" placeholder="Ihr Name" required>
-      <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-      <textarea name="message" rows="6" placeholder="Ihre Nachricht..." required></textarea>
-      <input type="submit" value="Nachricht senden">
-    </form>
+      <h3>In Vorbereitung</h3>
+      <ul>
+        <li><em>Quantencomputer – Vom Qubit zur Zukunft der Informatik</em></li>
+        <li><em>Die Struktur der Welt – Mathematik zwischen Abstraktion und Realität</em></li>
+      </ul>
+    </section>
   </main>
 
   <footer>
