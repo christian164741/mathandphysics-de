@@ -8,6 +8,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: white;
+      background-color: #000; /* Fallback Hintergrund */
     }
 
     /* Hintergrundbereich */
@@ -24,10 +25,10 @@
 
     /* Begrüßungstext */
     .hero h1 {
-      font-size: 3em;              /* größer */
-      color: #FFD700;              /* Gold-Gelb */
-      text-shadow: 2px 2px 8px #000; /* leichte Umrandung für bessere Lesbarkeit */
-      background: rgba(0,0,0,0.3);   /* leichter Hintergrund */
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 8px #000;
+      background: rgba(0,0,0,0.3);
       padding: 20px 40px;
       border-radius: 15px;
     }
@@ -48,11 +49,122 @@
     nav a:hover {
       color: #FFD700;
     }
+
+    /* Fahnen + Copyright oben links */
+    .flags {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .flags img {
+      height: 30px;
+      width: auto;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+    .flags img:hover {
+      border-color: #FFD700;
+    }
+
+    .flags .copyright {
+      font-size: 0.9em;
+      color: white;
+      margin-left: 10px;
+      opacity: 0.8;
+      transition: color 0.3s ease;
+    }
+    .flags .copyright:hover {
+      color: #FFD700;
+      opacity: 1;
+    }
+
+    /* Buchvorstellung */
+    .book-section {
+      background: #111;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .book-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+
+    .book-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .book-content img {
+      width: 220px;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .book-content p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #ddd;
+      max-width: 600px;
+    }
+
+    /* Button */
+    .book-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: white;
+      background-color: #333;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .book-button:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+    /* Footer unten */
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="hero">
-    <!-- Menü -->
+    <!-- Fahnen links oben -->
+    <div class="flags">
+      <a href="https://mathandphysics.de"><img src="img/de.png" alt="Deutsch"></a>
+      <a href="https://mathandphysics.eu"><img src="img/gb.png" alt="English"></a>
+      <span class="copyright">© Math and Physics</span>
+    </div>
+
+    <!-- Menü rechts oben -->
     <nav>
       <a href="index.html">Start</a>
       <a href="uebermich.html">Über mich</a>
@@ -63,5 +175,29 @@
     <!-- Begrüßungstext -->
     <h1>Willkommen! Hier wird Wissenschaft verständlich und kompakt erklärt.</h1>
   </div>
+
+  <!-- Buchvorstellung -->
+  <section class="book-section">
+    <h2>📖 Photon – Theorie und Anwendungen</h2>
+    <div class="book-content">
+      <img src="img/vorderseite.png" alt="Buchcover Photon">
+      <p>
+        Mein neues Buch <em>„Photon – Theorie und Anwendungen“</em> erklärt die spannende Welt des Lichtquants –
+        von den historischen Experimenten über die Quantenelektrodynamik bis hin zu modernen Anwendungen
+        in Laser- und Informationstechnik.  
+        <br><br>
+        Ziel ist es, komplexe Themen verständlich und zugleich präzise darzustellen – für Interessierte,
+        Studierende und alle, die wissen wollen, wie Licht unser Universum prägt.
+      </p>
+      <a href="buecher.html" class="book-button">Mehr erfahren</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © Math and Physics · 
+    <a href="impressum.html">Impressum</a> · 
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
 </body>
 </html>
