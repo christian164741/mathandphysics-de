@@ -2,16 +2,84 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Math & Physics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math & Physics – Bücher, Physik & Quanten leicht erklärt</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Math & Physics: Bücher und Artikel zu Photonen, Quantenmechanik und moderner Physik – verständlich, präzise, didaktisch. Kostenloses PDF mit DOI auf Zenodo." />
+  <meta name="keywords" content="Photon, Quantenmechanik, Quantenelektrodynamik, Photoeffekt, Compton-Streuung, Photonik, Lasertechnik, Quantenkommunikation, Physik Buch, Christian Weilharter" />
+  <link rel="canonical" href="https://mathandphysics.de/" />
+  <link rel="alternate" hreflang="de" href="https://mathandphysics.de/" />
+  <link rel="alternate" hreflang="en" href="https://mathandphysics.eu/" />
+  <link rel="alternate" hreflang="x-default" href="https://mathandphysics.eu/" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Math & Physics – Bücher, Physik & Quanten leicht erklärt" />
+  <meta property="og:description" content="Bücher & Artikel zu Photonen, Quantenmechanik und moderner Physik. Kostenloses PDF mit DOI auf Zenodo." />
+  <meta property="og:url" content="https://mathandphysics.de/" />
+  <meta property="og:image" content="https://mathandphysics.de/img/og-cover.png" />
+  <meta property="og:site_name" content="Math & Physics" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Math & Physics – Bücher, Physik & Quanten leicht erklärt" />
+  <meta name="twitter:description" content="Photon, Quanten & moderne Physik – klar erklärt. Kostenloses PDF mit DOI auf Zenodo." />
+  <meta name="twitter:image" content="https://mathandphysics.de/img/og-cover.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <!-- Strukturierte Daten (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Math & Physics",
+        "url": "https://mathandphysics.de/",
+        "logo": "https://mathandphysics.de/img/logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Christian Weilharter"
+        },
+        "sameAs": [
+          "https://zenodo.org/communities/photon",
+          "https://github.com/christian164741"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Math & Physics",
+        "url": "https://mathandphysics.de/",
+        "inLanguage": "de",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://mathandphysics.de/suche.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Stildefinitionen -->
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: white;
-      background-color: #000; /* Fallback Hintergrund */
+      background-color: #000;
     }
 
-    /* Hintergrundbereich */
+    /* Hero-Bereich mit Hintergrundbild */
     .hero {
       position: relative;
       background: url("img/hintergrund.png") no-repeat center center;
@@ -23,7 +91,6 @@
       text-align: center;
     }
 
-    /* Begrüßungstext */
     .hero h1 {
       font-size: 3em;
       color: #FFD700;
@@ -33,7 +100,7 @@
       border-radius: 15px;
     }
 
-    /* Menü oben rechts */
+    /* Navigation */
     nav {
       position: absolute;
       top: 20px;
@@ -50,7 +117,7 @@
       color: #FFD700;
     }
 
-    /* Fahnen + Copyright oben links */
+    /* Sprachen & Copyright */
     .flags {
       position: absolute;
       top: 20px;
@@ -58,7 +125,6 @@
       display: flex;
       align-items: center;
     }
-
     .flags img {
       height: 30px;
       width: auto;
@@ -70,7 +136,6 @@
     .flags img:hover {
       border-color: #FFD700;
     }
-
     .flags .copyright {
       font-size: 0.9em;
       color: white;
@@ -83,19 +148,17 @@
       opacity: 1;
     }
 
-    /* Buchvorstellung */
+    /* Buchabschnitt */
     .book-section {
       background: #111;
       padding: 60px 20px;
       text-align: center;
     }
-
     .book-section h2 {
       font-size: 2.2em;
       margin-bottom: 20px;
       color: #FFD700;
     }
-
     .book-content {
       display: flex;
       flex-direction: column;
@@ -103,22 +166,18 @@
       max-width: 900px;
       margin: 0 auto;
     }
-
     .book-content img {
       width: 220px;
       border: 3px solid #fff;
       border-radius: 10px;
       margin-bottom: 20px;
     }
-
     .book-content p {
       font-size: 1.2em;
       line-height: 1.6;
       color: #ddd;
       max-width: 600px;
     }
-
-    /* Button */
     .book-button {
       display: inline-block;
       margin-top: 20px;
@@ -137,7 +196,7 @@
       color: #000;
     }
 
-    /* Footer unten */
+    /* Footer */
     footer {
       background: #111;
       padding: 20px;
@@ -155,16 +214,16 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- Hero-Bereich -->
   <div class="hero">
-    <!-- Fahnen links oben -->
     <div class="flags">
       <a href="https://mathandphysics.de"><img src="img/de.png" alt="Deutsch"></a>
       <a href="https://mathandphysics.eu"><img src="img/gb.png" alt="English"></a>
       <span class="copyright">© Math and Physics</span>
     </div>
 
-    <!-- Menü rechts oben -->
     <nav>
       <a href="index.html">Start</a>
       <a href="uebermich.html">Über mich</a>
@@ -172,11 +231,10 @@
       <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <!-- Begrüßungstext -->
     <h1>Willkommen! Hier wird Wissenschaft verständlich und kompakt erklärt.</h1>
   </div>
 
-  <!-- Buchvorstellung -->
+  <!-- Buchabschnitt -->
   <section class="book-section">
     <h2>📖 Photon – Theorie und Anwendungen</h2>
     <div class="book-content">
